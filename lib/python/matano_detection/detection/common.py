@@ -104,12 +104,16 @@ def _load_table_detection_config():
     ret = defaultdict(list)
     for detection_path, detection_config in DETECTION_CONFIGS.items():
         for table_name in detection_config["tables"]:
-            ret[table_name].append(
-                {
-                    "detection": detection_config,
-                    "module": importlib.import_module(".", f"{detection_path}.detect"),
-                }
-            )
+            if detection_config.get("enabled", False):
+                ret[table_name].append(
+                    {
+                        "detection": detection_config,
+                        "module": importlib.import_module(".", f"{detection_path}.detect"),
+                    }
+                )
+            else:
+                detection_name = detection_config.get("name")
+                logger.warning(f"skipping disabled detection {detection_name}")
     TABLE_DETECTION_CONFIG = ret
 
 
