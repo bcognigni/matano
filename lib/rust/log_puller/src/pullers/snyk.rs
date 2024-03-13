@@ -238,7 +238,6 @@ impl PullLogs for SnykPuller {
                     .await?;
 
                 let response_json: Vec<serde_json::Value> = response.json().await?;
-                println!("This is the response: {}", response_json);
                 let length = response_json.len();
 
                 for mut value in response_json {
