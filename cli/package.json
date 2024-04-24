@@ -21,6 +21,8 @@
   ],
   "dependencies": {
     "@aws-cdk/cx-api": "*",
+    "@aws-cdk/cloudformation-diff": "2.138.0",
+    "cdk-assets": "2.138.0",
     "@oclif/core": "^1.9.5",
     "@oclif/plugin-autocomplete": "*",
     "@oclif/plugin-help": "^5",

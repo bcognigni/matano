@@ -23,6 +23,8 @@
   },
   "dependencies": {
     "@aws-cdk/cx-api": "*",
+    "@aws-cdk/cloudformation-diff": "2.138.0",
+    "cdk-assets": "2.138.0",
     "@mrgrain/cdk-esbuild": "^3",
     "aws-cdk": "2.138.0",
     "aws-cdk-lib": "2.138.0",
