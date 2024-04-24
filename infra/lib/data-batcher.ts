@@ -33,7 +33,7 @@ export class DataBatcher extends Construct {
     this.batcherFunction = new lambda.Function(this, "Function", {
       code: RustFunctionCode.assetCode({ package: "data_batcher" }),
       handler: "main",
-      runtime: lambda.Runtime.PROVIDED_AL2,
+      runtime: lambda.Runtime.PROVIDED_AL2023,
       timeout: cdk.Duration.seconds(10),
       environment: {
         RUST_LOG: "warn,data_batcher=info",

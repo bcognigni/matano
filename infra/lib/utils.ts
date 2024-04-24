@@ -42,7 +42,7 @@ export function readDetectionConfig(detectionDirectory: string): Record<string, 
 export const MATANO_USED_RUNTIMES = [
   lambda.Runtime.JAVA_11,
   lambda.Runtime.PROVIDED,
-  lambda.Runtime.PROVIDED_AL2,
+  lambda.Runtime.PROVIDED_AL2023,
   lambda.Runtime.PYTHON_3_9,
   lambda.Runtime.NODEJS_16_X,
 ];

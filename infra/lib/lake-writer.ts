@@ -23,7 +23,7 @@ export class LakeWriter extends Construct {
       code: RustFunctionCode.assetCode({ package: "lake_writer" }),
       handler: "main",
       memorySize: 1800,
-      runtime: lambda.Runtime.PROVIDED_AL2,
+      runtime: lambda.Runtime.PROVIDED_AL2023,
       environment: {
         RUST_LOG: "warn,lake_writer=info",
         OUT_BUCKET_NAME: props.outputBucket.bucketName,
@@ -38,7 +38,7 @@ export class LakeWriter extends Construct {
       code: RustFunctionCode.assetCode({ package: "lake_writer" }),
       handler: "main",
       memorySize: 3000,
-      runtime: lambda.Runtime.PROVIDED_AL2,
+      runtime: lambda.Runtime.PROVIDED_AL2023,
       environment: {
         RUST_LOG: "warn,lake_writer=info",
         OUT_BUCKET_NAME: props.outputBucket.bucketName,

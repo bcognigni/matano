@@ -109,7 +109,7 @@ export class AlertForwarder extends Construct {
       handler: "main",
       memorySize: 128,
       description: "[Matano] Forward alerts to external destinations",
-      runtime: lambda.Runtime.PROVIDED_AL2,
+      runtime: lambda.Runtime.PROVIDED_AL2023,
       environment: {
         RUST_LOG: "warn,alert_forwarder=info",
         ALERT_TRACKER_TABLE_NAME: props.alertTrackerTable.tableName,
@@ -185,7 +185,7 @@ export class AlertWriter extends Construct {
       description: "[Matano] Extracts alerts from rule matches and publishes them.",
       // prevent concurrency
       reservedConcurrentExecutions: 1,
-      runtime: lambda.Runtime.PROVIDED_AL2,
+      runtime: lambda.Runtime.PROVIDED_AL2023,
       environment: {
         RUST_LOG: "warn,alert_writer=info",
         ALERT_TRACKER_TABLE_NAME: props.alertTrackerTable.tableName,

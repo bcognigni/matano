@@ -77,7 +77,7 @@ export class ExternalLogPuller extends Construct {
 
     const func = new lambda.Function(this, "Function", {
       description: "[Matano] Pulls external logs for ingestion on a schedule.",
-      runtime: lambda.Runtime.PROVIDED_AL2,
+      runtime: lambda.Runtime.PROVIDED_AL2023,
       code: RustFunctionCode.assetCode({ package: "log_puller" }),
       handler: "main",
       timeout: cdk.Duration.minutes(2),

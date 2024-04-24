@@ -33,7 +33,7 @@ export class Transformer extends Construct {
       code: lambda.Code.fromAsset(props.logSourcesConfigurationPath),
       handler: "main",
       memorySize: 3008,
-      runtime: lambda.Runtime.PROVIDED_AL2,
+      runtime: lambda.Runtime.PROVIDED_AL2023,
       architecture: this.rustFunctionLayer.arch,
       environment: {
         ...this.rustFunctionLayer.environmentVariables,
