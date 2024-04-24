@@ -19,7 +19,7 @@
       "./infra/node_modules/aws-cdk-lib/aws-s3-deployment/**/*",
       "./infra/node_modules/aws-cdk-lib/aws-s3/**/*",
       "./infra/node_modules/aws-cdk-lib/lazy-index.js",
-      "infra/node_modules/aws-cdk-lib/custom-resource-handlers/dist/aws-s3/notifications-resource-handler/index.py"
+      "./infra/node_modules/aws-cdk-lib/custom-resource-handlers/dist/aws-s3/notifications-resource-handler/index.py"
     ],
     "outputPath": "build"
   }
