@@ -453,11 +453,6 @@ async fn merge_incoming_rule_matches_to_alert_and_compute_cdc(
     .0
     .as_timestamp()
     .map(|t| t.clone());
-    let original_event = vrl(".original_event", &mut matano_alert_info)?
-        .0
-        .as_str()
-        .context("missing original")?
-        .to_string();
     let alert_title = vrl(".title", &mut matano_alert_info)?
         .0
         .as_str()
@@ -526,7 +521,6 @@ async fn merge_incoming_rule_matches_to_alert_and_compute_cdc(
     let new_alert = Alert {
         id: alert_id,
         creation_time: alert_creation_time,
-        original_event: original_event,
         title: alert_title,
         severity: alert_severity,
         severity_icon_url: severity_icon_url,
