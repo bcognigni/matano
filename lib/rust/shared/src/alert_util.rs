@@ -108,7 +108,6 @@ pub struct Alert {
 
     /// Is None for non-activated alerts.
     pub creation_time: Option<DateTime<Utc>>,
-    pub event_original: String,
     pub title: String,
     pub severity: String,
     pub severity_icon_url: String,
